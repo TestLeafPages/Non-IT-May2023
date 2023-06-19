@@ -1,0 +1,297 @@
+Recap
+
+A class is a blueprint or a template for creating objects.
+It defines the properties and behaviors that an object of 
+that class should have.
+
+A class consists of variables, methods.
+
+An object is an instance of a class
+
+An object is created using the "new" keyword
+
+When a new instance of a class is created using the new keyword,
+memory is allocated for that object and
+the class's constructor is called to initialize the object.
+
+Once an object is created, you can access its properties 
+and methods using dot notation.
+
+The variables in a class ->data of an object. 
+
+Methods define the behavior of the object.
+
+access return methodName(input arg){
+}
+
+Data types are used to specify the type of data that can be stored in a variable,
+as well as the operations that can be performed on that data.
+Java has two categories of data types: 
+primitive data types and Non-primitive data types.
+
+Primitive data types 
+
+boolean: represents true/false values
+byte: represents a small integer value 8
+short: represents a short integer value 16
+int: represents an integer value 32
+long: represents a long integer value 64l
+float: represents a  floating-point value 32 f
+double: represents a  floating-point value 64 d
+char: represents a single character value'T'
+
+Non-primitive
+
+String: represents a sequence of characters
+Arrays: represents a collection of elements of the same type
+Classes: represents objects with properties and behaviors
+Operators:
+operators are special symbols that perform specific operations
+ 
+1.Arithmetic operators:
+These operators are used to perform mathematical operations
+such as addition, subtraction, multiplication,and division.
++ (addition)
+- (subtraction)
+* (multiplication)
+/ (division)-Que
+% (modulus or remainder)
+
+2.Assignment operators:
+These operators are used to assign values to variables. 
+= (assignment)
++= (add and assign)
+-= (subtract and assign)
+*= (multiply and assign)
+/= (divide and assign)
+%= (modulus and assign)
+
+3.Comparison operators:
+These operators are used to compare two value
+and return a boolean value (true or false). 
+== (equal to)
+!= (not equal to)
+> (greater than)
+< (less than)
+>= (greater than or equal to)
+<= (less than or equal to)
+
+4.Logical operators:
+These operators are used to combine two or more boolean expressions
+and return a boolean value.
+&& (logical and) 
+AND----->&&
+1*0=0     T F F
+0*1=0     F T F
+0*0=0     F F F
+1*1=1     T T T
+
+(5==5)&&(5<5)---false
+
+|| (logical or)
+addition
+OR------>||
+1+0=1    T F T
+0+1=1    F T T
+1+1=1    T T T
+0+0=0    F F F
+(5==5)||(5<5)---True
+! (logical not or negation)
+1---0   T F
+
+0---1   F  T
+boolean flag=false;
+!flag
+5. unary operator
+Increment operator (++) 
+Decrement operator (--)
+
+
+For Loop:
+---------
+fixed number of time 
+
+syntax:
+--------
+for(initialization;condition;incre/decre){
+//body of the statement
+}
+for(int i=0;i<=5;i++){
+syso(i)
+}
+
+While
+------
+while(condition){
+}
+
+example:
+536
+sum of the number
+ int num=536;
+ split one by one 
+ %
+ 
+factorial of 5
+ ---------------
+ 1.decalre and intialization
+num=5
+5*4*3*2*1=120
+int num=5;--->Declare
+int fact=24;
+for()
+fact=fact*i;//1*1=1
+
+1*2=2
+2*3=6
+6*4=24
+24*5=120;
+ 
+ 
+ if(condtion){
+ syso()
+ }
+ if(mark>35){
+ }
+ if(){
+ }
+ else{
+ }
+ if(){
+ else if(){
+ }
+ }
+ 
+switch(Mon){
+ case:1
+ sys("Mon");
+ break;
+ case:2
+ sys("Tue");
+ break;
+ case:3
+ sys("wed");
+ break;
+ }
+ chrome edge firefox safari
+cross browser testing
+
+Switch(condtion)
+
+case 1:
+syso("chrome");
+break;
+case2:
+syso("edge")
+break;
+
+default
+syso("no browser")
+
+
+
+The return statement can be used in two ways:
+----------------------------------------------
+
+Returning a value: When a method has a return type
+(other than void), the return statement is used to return a value of that type. 
+
+
+
+Exiting a method: When a method does not have a return type (i.e., it returns void), the return statement is used to exit the method.
+public void printNumbers(int n) {
+    for (int i = 1; i <= n; i++) {
+        System.out.println(i);
+        if (i == 5) {
+            return;
+        }
+    }
+}
+Control Statements:
+
+They allow you to determine the order in which statements
+are executed based on certain conditions or repetitions.
+
+Java provides several types of control statements:
+
+Conditional Statements:(Selection)
+------------------------
+if statement: It executes a block of code if a specified condition is true.
+
+if-else statement: It executes one block of code if a specified condition
+is true and another block if it is false.
+
+nested if-else statement: It allows you to have an if-else statement
+inside another if-else statement.
+
+Looping Statements:(Iteration)
+-------------------
+for loop: It repeats a block of code a specified number of times.
+
+syntax:
+
+for(int i=0;i<=5;i++ ){
+
+}
+
+
+while loop: It repeatedly executes a block of code as long as a specified condition is true.
+
+
+532=5+3+2=10
+int num=532;
+sum of digit?
+/ %
+
+532/10=53 r 2
+
+53 qu=5 re 3
+
+5
+(1 to 20)
+for()//1 2 3 4 
+if(){
+syso
+
+factorial of 5
+step 1: declare and initialize the variables
+
+step 2:5*4*3*2*1=120
+
+do-while loop: It executes a block of code once 
+and then repeatedly executes it as long as a specified condition is true.
+
+Jump Statements:
+
+break statement: It terminates the current loop or switch statement
+and transfers control to the statement immediately following it.
+
+continue statement: It skips the rest of the current iteration 
+of a loop and proceeds to the next iteration.
+
+restatement: It terminates the execution of a method and returns a value to the caller.
+Returning a value: When a method has a return type
+(other than void), the return statement is used to return a value of that type. 
+
+
+
+Exiting a method: When a method does not have a return type(i.e., it returns void),
+the return statement is used to exit the method.
+public void printNumbers(int n) {
+    for (int i = 1; i <= n; i++) {
+        System.out.println(i);
+        if (i == 5) {
+            return;
+        }
+    }
+	
+	
+	
+	Arrays
+	--------
+	datatype var=value;
+	int num1=1;
+	
+	int nums[]={10,20,30,40};
+	
+	
