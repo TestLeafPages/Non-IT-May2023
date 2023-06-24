@@ -1,0 +1,75 @@
+What is selenium?
+Open source tool to automate the web application
+Structured framework
+Automation:
+Time and efficient
+yes all browser
+support all os
+write any language
+
+microsoft office package
+excel---Testdata----external source??
+2004-selenium in
+2006-webdriver based on webapplication
+selenium webdriver2009-v3-w3cStandared protocal
+What selenium webdriver can do?
+It support all browser
+It support all os
+It can run in different language-java,js,python,ruby...
+Manual Testing:
+We do repetitive action
+Time Consuming
+Complex to perform some calculation
+What we can do?
+can automate excel sheet??No window based(library file -java Apache poi)
+can automate mainframe application??no desktop(java library-winapp driver)
+can it talk to data base??no(java library jdbc)
+can it automate mobile app??no(Appium)
+can it do perfprmance testing??no(jmeter/load runner)
+can it do API testing??no(seleniumnv4 developer tool CDT partially)
+Automation tools:
+selenium-open source-free
+uft-unified function testing
+puppeteer-google
+cypress
+playwright
+
+Maven ---build in tool
+many library in it()
+pom.xml
+mvn repository
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.8.3</version>
+</dependency>
+set the path
+System.setProperty("webdriver.chrome.driver","/path/to/chromedriver")
+Later we need to add this line to set up the path
+WebDriverManager.chromedriver.setup();
+
+Right now we need to include any of above code
+
+ DOM
+  Document Object Model
+  right click-inspect
+  f12
+  ctrl+shift+i
+Tag
+<>
+<html>--->tag purple
+
+attribute---->(brown or orange)
+attribute value---->blue
+text()----->black in colour
+
+Locators:
+8 
+1.id
+2.name
+3.classname
+4.Linktext <a> href attribute
+5.Partial link <a> href attribute but we can some space or lengthy text
+6.tagName
+7.xpath
+8.css Selector
