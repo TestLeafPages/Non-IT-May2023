@@ -1,0 +1,117 @@
+ClassRoom 1:
+Load the url :https://jqueryui.com/droppable/
+Actions builder=new Actions(driver);
+perform Drag and drop
+
+ClassRoom 2: 
+Load the url :https://www.snapdeal.com/
+perform MouseHover Action on Men's Fashion 
+Actions builder=new Actions(driver);
+
+ClassRoom 3:
+Load the url:https://www.leafground.com/menu.xhtml
+perform RightClick
+
+
+ClassRoom1:
+Step:1-Launch the url (https://erail.in/)
+Step:2-Enter From as MAS
+Step:3-Enter To as MDU
+Step:4-Uncheck sort on Date  
+Step:5-Get the Train Names
+(DataTable TrainList TrainListHeader stickyTrainListHeader)-TableName
+Ensure whether there are duplicate train names
+Hint:use size() to check duplicate
+
+
+Actions Class
+----------------
+the Actions class is a feature that allows you to simulate advanced user
+interactions involving the mouse and keyboard. 
+It provides a set of methods to perform various actions such as clicking,
+hovering, dragging and dropping, double-clicking, right-clicking, and entering text.
+
+The Actions class is part of the org.openqa.selenium.interactions package in Selenium WebDriver.
+To use the Actions class, you need to create an instance of it by passing the WebDriver instance as a parameter.
+Advanced user Interaction
+-------------------------
+click
+sendkeys
+clear
+getText()
+getAttribute()
+Advanced user interactions:
+------------------------------
+Mouse and keyboard
+Actions class
+
+Action class is not throw any exception
+-----------------------------------------
+1.MouseHover
+-------------
+Actions builder=new Actions(driver);
+builder.moveToElement(webElement).perform();
+
+2.Droppable
+Actions builder=new Actions(driver);
+builder.dragAndDrop(source,destination).perform();
+
+3.Draggable
+Actions builder=new Actions(driver);
+builder.dragAndDropBy(webElement,x,y).perform();
+Drag and DropBy
+
+4.RightClick
+Actions builder=new Actions(driver);
+builder.contextclick(webElement).perform();
+
+5.DoubleClick
+Actions builder=new Actions(driver);
+builder.doubleclick(webElement).perform();
+
+6.ScrollDown
+Actions builder=new Actions(driver);
+builder.scrollToElement(webElement).perform();
+
+7.Select
+--------
+Actions builder=new Actions(driver);
+
+// Step1 : Create object for Actions class
+		Actions builder = new Actions(driver);
+
+// step2: use appropriate method to do the action
+builder.clickAndHold(WebElement).moveToElement(WebElement).release().perform();
+
+// perform() is mandatory at the end of actions
+
+8.sort the element:
+Actions builder=new Actions(driver);
+builder.dragAndDrop(item6,item1).dragAndDrop(item2,item 3).perform
+builder.dragAndDropBy(webElement,x,y).perform();
+
+9.keys action:
+
+builder.keyDown(Keys.CONTROL).click(WebElement).click(WebElement).click(WebElement).click(WebElement).keyUp(Keys.CONTROL).perform();
+				other method:
+builder.clickAndHold(item1).moveToElement(item4).release().perform();
+Keyboard Methods:
+======================
+sendKeys(keysToSend) : sends a series of keystrokes onto the element
+keyDown(theKey) : Sends a key press without release it. Subsequent actions may assume it as pressed. (example: Keys.ALT, Keys.SHIFT, or Keys.CONTROL)
+keyUp(theKey): Performs a key release
+
+Mouse Actions:
+==========================
+
+click (): Simply click on element
+doubleClick (): Double clicks onElement
+contextClick() : Performs a context-click (right click) on an element
+clickAndHold(): Clicks at the present mouse location (without releasing)
+dragAndDrop(source, target): Invokes click-and-hold at the source location and moves to the location of the target element before releasing the mouse. source – element to grab, target – element to release
+dragAndDropBy(source, xOffset, yOffset): Invokes click-and-hold at the source location and moves to the location and release
+moveToElement(toElement): It shifts the mouse to the center of the element
+release(): Releases the depressed left mouse button at the existing mouse location
+
+
+=====================================================

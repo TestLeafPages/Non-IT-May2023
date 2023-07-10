@@ -1,0 +1,126 @@
+Alert (Selenium WebDriver)
+
+- Modal Dialog
+- Not inspectable (it is javascript not a html code)
+
+
+Types
+
+- Simple Dialog (Only one option)   - Information !
+- Confirm Dialog (2 options)    - Confirmation !
+- Prompt Dialog (Text Box + 2 Boolean) - Data Collection + Confirmation !
+
+
+Methods
+
+- accept    (Positive Action)
+- dismiss   (Negative Action)
+- sendKeys  (Type value on the prompt text) -- always clear before type
+- getText   (Read the title and not the domain)
+syntax:
+driver.SwitchTo().alert();
+
+Limitation
+
+- You cannot take snapshot of the alert 
+
+Exception
+- If you try interacting with DOM element without closing alert: UnhandledAlertException
+- If you are interacting with an alert through code but alert did not appear: NoAlertPresentException
+
+Sweet Alert - inspectable, Inspect -> findElement -> Click ! Can take snap !
+ driver.findElement(By.locator("")).click();
+	
+	
+
+Alert alert = driver.switchTo().alert();
+
+alert.accept();
+
+alert.dismiss();
+
+Frame
+
+- HTML element that helps developers to organize the set of elements
+- iframe (tag) that means it is in-line frame (frame / frameset)
+
+
+NoSuchElement
+
+- Either your locator is wrong 
+- Or the element may be living inside the frame
+
+Exception
+
+- NoSuchFrameException
+
+Overloading
+
+- frame(int index) // this is more than enough !
+- frame(String nameOrId)
+- frame(WebElement ele)
+
+Come out of the frame
+
+- switch to defaultContent
+------------------------------------------------------
+Window / Tab
+================
+- Window or Tab is technically same
+- Window / Tab -> URL / browser controls.
+
+Challenges
+
+- Window URL / Title / Sequence Number can change
+- So, how to find the window uniquely?
+
+Selenium Way
+
+- Every new window -> tag it -> new WindowHandle -> String (unique)
+CDwindow-8511B0C36AFC6FB2CDC63DB23E2E25DC
+CDwindow-AB18FDB93805BAFE24FD426FF51E0CA7
+
+
+Exception
+
+NoSuchWindowException
+
+Close and Quit
+
+How to swtitch to a new window ?
+
+- getWindowHandles()
+- Convert Set to List
+- Pick the particular window using get(index)
+- Switch to the window using the handle
+- Close or Quit
+
+open window will be closed by driver.close();
+To close all the open window driver.quit();
+
+-How to Handle multiple window:
+----------------------------------
+-To Switch the control from one window to another window
+
+-->How to get the  reference of the window
+  --getWindowHandle()->To get the reference of current window String
+  --getWindowHandles()->To get references of all the window opened by the WebDriver set
+-->How to switch the control
+  --apply getWindowHandles and get all the references in a set
+  --copy the set values into List
+  --apply driver.switchTo().window(windowHandle)
+snapshots:
+==========
+Steps to handle snapshort
+1.Take a snapshot
+2.Specify the destination file
+3.save the screenshot from the source file to the destination file. 
+
+dependencies like Apache Commons IO library 
+
+<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.8.0</version>
+		</dependency>
+------------------------------------------------------
