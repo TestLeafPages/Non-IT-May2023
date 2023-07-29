@@ -1,0 +1,49 @@
+Create folder
+1.R.c project---new---folder
+2.click on folder---Name the folder by your own(Data)
+3.click finish
+
+ClassRoom 1:
+Steps to read from excel:
+---------------------------
+1.Open the workbook using filename and path
+2.Go to the specific sheet(by sheet name or index)
+3.Go to specific row(by index)	
+4.Go to the specific column(by index)---cell
+5.Read the content from excel   
+
+
+	 	//set up the path for excel
+		
+		//Get into the sheet based index and String
+		
+		//row count
+		 
+		//column(cell) count
+		 
+	    //To pass the data
+		 
+		 //Get into the row
+		 
+		 //Get into cell
+		
+		//Read the data from cell
+		
+		//Close the file
+		 
+		// return data; 
+
+Steps to integrate apache POI with TestNG
+
+1.convert the method with  return type as String[][]
+2.Make sure to push all the excel data to the array of data
+3.Comment or delete hard code data of dataprovider 
+and replace with excel data
+4.Run the Create lead and confirm its working fine
+
+Steps for Comman integration:(TestNG+ apache POI)
+Step 1: Remove the comman data from the individual testcase into BaseClass(ProjectSpecificMethod)
+Step 2: remove the hard code of excel file name into variable 
+step3: Declare the variable into Global 
+step4:In individual testcase create a method by the annotation @BeforeTest
+ex: fileName="Excelfile name"
