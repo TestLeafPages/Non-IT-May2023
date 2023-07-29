@@ -1,0 +1,178 @@
+
+Constructor:
+-----------------
+Car obj =new Car();
+
+int a,b;
+for(int i=0;)
+
+
+A Constructor like method
+Constructor has a same name like class
+when object for the class create --->Constructor invoked
+new keyword-->invoke constructor and allocate some memory for the object
+java compiler-->default constructor
+
+Constructors are essential for creating and setting up objects before they can be used in the program.
+constructor Chain--->this keyword,super keyword
+
+syntax:
+ 
+ public className(){
+ 
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+types:
+1.No arg(default constructor)
+className();
+2.Parameterized constructor
+className(String name,int id)
+
+
+syntax:
+public ClassName();
+
+//Create obj for class
+ClassName obj=new ClassName();
+
+method
+public void menthodName(){
+}
+
+this Keyword:
+---refer current class method
+---used for constructor chaining
+---pass arg in method can use this
+---return current class instance
+this-->return same class object 
+
+Super--> The super keyword in java comes in a role with the concept of inheritance.
+the super keyword refers to the object of an immediate parent class. It means the 
+super keyword uses in subclasses to access the object of the superclass.
+variable, constructor, and method of a superclass by using the super keyword. 
+1. Java super keyword can access the variable of the parent class  
+2. Java super keyword can invoke the constructor of the parent class
+3. Java super keyword can access the method of the parent class
+
+
+
+static keyword:
+
+The static keyword can be used as a 
+static variable, static method, static block, and static class. 
+
+1.static keyword with variable it is called static variable
+
+Syntax to declare the static variables:
+
+static dataType variableName = value;
+
+2. Static method in Java
+
+You can declare a static method by using of static keyword.
+1. Static methods are belonging to a class.
+2. You can access a static method by using the class name. You do not have the need to create an object.
+3. A static method can access only static variables. If you write any non-static variable in a static method,
+then it will throw an exception at compilation time.
+syntax:
+access_modifier static return_Type method_Name()
+{
+    // body of method
+}
+
+final 
+-----
+its a keyword used to apply some restriction to the user
+cvv-123
+
+final can applied to classes,method,variable
+
+1.final variable-constant you cannot changes the value
+2.final method-you cannot override the final method
+3.final class-you cannot extends the final class
+
+
+
+
+
+
+
+
+==================================================================
+Wait -> to address timing difference between the script & application
+	    to make the script and application in sync
+		
+Selenium Wait:
+---------------
+1. Implicitly Wait 
+2. Explicitly Wait		
+
+Java Wait: (Explicit Wait)
+-----------
+Thread.sleep(time) -> It will slow down the execution
+					  This has to be applied wherever needed
+					  It will wait till the end of the time limit
+					-sometimes immediately
+                    -sometimes may take longer
+
+best approach:Interact as soon as ready
+
+FluentWait(super class)//dynamic
+
+WebDriverWait(sub class)//static 20	
+
+solution:every 500 ms (polling interval) the code will go and check if the expected condition
+is met or not.
+
+if it is met--> perform the action
+not met-->sleep for another500ms before poll again
+
+after crossing the max time-->it throw Exception TimeoutException				
+					  
+					  
+Implicitly Wait:
+-----------------
+-driver.manage().timeout().implicitlyWait(Duration.ofSeconds(30));
+- Its a common wait for all the locators in my script (findElement & findElements)			
+- It is used to avoid the NoSuchElementException when the element is loaded little late
+- If the element is loaded within the given time limit, it will locate element immediately and 
+  proceed with next step in the script
+- If the element is not loaded within the given time limit, it will throw NoSuchElementException
+findElements--->empty list
+- Best practice is, apply ImplicitlyWait at the starting of your script
+
+Explicit Wait
+=============
+When you like to wait for element behaviour!!
+
+The explicit wait waits for a specific condition to be met within a defined timeout period.
+
+Once the condition is met the script either proceeds to the next step
+
+The timeout is reached--->throws an exception if the condition is not satisfied within the specified time.
+
+web pages may not load instantly,or certain elements may take some time
+to become visible or interactive.
+
+When writing automation scripts,it is essential to wait for these elements
+to be present or to meet specific conditions before performing action. 
+1.to become clickable
+2.element to become visible
+3.element to become enable
+4.alert to appear
+5.window to appear
+
+ClassRoom:
+Load the url:https://leafground.com/waits.xhtml
+Wait for Invisibility (1 - 10 Sec)
