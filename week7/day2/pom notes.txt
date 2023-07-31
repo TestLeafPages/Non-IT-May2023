@@ -1,0 +1,103 @@
+Today's Agenda
+--------------
+Page Object Model
+-------------------
+----set up for sequential execution
+----set up for parallel execution
+----Integration of data parameterization
+Framework
+---------
+its a real or conceptial structure intended to guide or support the building of product.
+
+why framework
+--------------
+----To produce uniform output/result
+----To increase the productivity
+----Anyone can able to produce same result
+----Easy maintenance of script
+----Reduce the duplicate code
+----supports multi-Lingual application
+----support for better reporting(Extend rep,index html)
+
+POM--Page object Model
+POM.xml---Project object model
+POM--Page object Model
+-------------------------
+Design pattern to build a automation framework.
+
+selenium java
+
+Testng
+apache poi
+
+
+leaftap
+--------
+how many page
+1.login
+2.homepage(crmsfa)
+3.leadpage
+4.create lead
+5.viewlead
+
+
+POM Implementation Steps
+------------------------------
+1.Create a BaseClass(ProjectSpecificMethod) for common variables and methods
+2.Create java classes for each page that we navigate in the application 
+3.Create  methods for each actions and verification in each page
+4.All the page related java classes should extents the ProjectSpecificMethod
+5.All the methods in the pages should have return type based on the landing page
+6.Create new package for testcase create the class for testing
+7.Go to projectspecific method to @before and comman method
+8.All the testcase java class also should extends base class project specificmethod
+
+ClassRoom
+----------
+1.Create Maven project
+2.Add all the necessary dependencies
+3.Create base,pages,testcases package
+4.setup baseclass for common variables and methods
+5.setup pages for createLead testcase with proper return statement for methods
+6.Create testcase for create lead and call the method for pages and execute
+
+How to pass driver from testcase to the pages
+1.Create public constructor in all the pages with chromedriver as aruguments
+constructor code should be this.driver=driver;
+2.pass driver to all construtor call starting from testcases and all constrcutor call method
+
+
+This keyword
+refers current object in a  method or constructor
+Here is given the 6 usage of java this keyword.
+
+this can be used to refer current class instance variable.
+this can be used to invoke current class method (implicitly)
+this() can be used to invoke current class constructor.
+this can be passed as an argument in the method call.
+this can be passed as argument in the constructor call.
+this can be used to return the current class instance from the method.
+
+ClassRoom
+------------
+Integrate DataProvider and Apache POI
+1.Create excel datasheet under data folder
+2.copy and paste readexcel.java under utils package
+3.copy and paste the excelfilename dataprovider code in projspemetho(need to corre the import)
+4.copy and paste @beforetest(setfilename)into createlead testcases
+5.Integrate dataprovider to the testcase
+---change the normal method with arg to receive data
+----pass the data to the methods in the testcase
+
+Excel----DataProvider----@test
+@beforetest----its give filename(createlead)
+   @Dataprovider
+         @test
+
+
+
+
+
+
+
+
